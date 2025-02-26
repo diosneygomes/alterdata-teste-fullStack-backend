@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Alterdata.TesteFullStackBackend.Application\Alterdata.TesteFullStackBackend.Application.csproj" />
+    <ProjectReference Include="..\Alterdata.TesteFullstackBackend.Core\Alterdata.TesteFullstackBackend.Core.csproj" />
+    <ProjectReference Include="..\Alterdata.TesteFullStackBackend.Data\Alterdata.TesteFullStackBackend.Data.csproj" />
+  </ItemGroup>
+
 </Project>

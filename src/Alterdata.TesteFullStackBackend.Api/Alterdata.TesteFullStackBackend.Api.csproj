@@ -12,4 +12,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Alterdata.TesteFullStackBackend.Application\Alterdata.TesteFullStackBackend.Application.csproj" />
+    <ProjectReference Include="..\Alterdata.TesteFullStackBackend.Data\Alterdata.TesteFullStackBackend.Data.csproj" />
+    <ProjectReference Include="..\Alterdata.TesteFullStackBackend.Service\Alterdata.TesteFullStackBackend.Service.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,11 +1,15 @@
 using Alterdata.TesteFullStackBackend.Api.Configurations;
+using Alterdata.TesteFullStackBackend.Data.Context;
 using Asp.Versioning.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApiConfig();
 builder.Services.AddSwaggerGen();
 builder.Services.ResolveDependencies();
+builder.Services.AddDbContext<DbMemoryContext>(options =>
+    options.UseInMemoryDatabase("MemoryDB"));
 
 var app = builder.Build();
 
