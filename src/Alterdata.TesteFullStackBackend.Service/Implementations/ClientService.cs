@@ -49,7 +49,8 @@ namespace Alterdata.TesteFullStackBackend.Service.Implementations
                 Id = c.Id,
                 Name = c.Name,
                 Email = c.Email,
-                PhoneNumber = c.PhoneNumber
+                PhoneNumber = c.PhoneNumber,
+                Active = c.Active
             });
 
             return clientsDTO;

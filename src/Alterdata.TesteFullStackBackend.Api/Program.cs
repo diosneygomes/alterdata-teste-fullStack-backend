@@ -21,4 +21,9 @@ app.UseApiConfig(
 
 app.MapControllers();
 
+var scope = app.Services.CreateScope();
+var context = scope.ServiceProvider.GetRequiredService<DbMemoryContext>();
+DatabaseSeeder.Seed(context);
+
+
 app.Run();

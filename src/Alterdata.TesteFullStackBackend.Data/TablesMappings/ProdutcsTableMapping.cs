@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Alterdata.TesteFullStackBackend.Data.TablesMappings
 {
-    internal class ProdutcsTableMapping : IEntityTypeConfiguration<Product>
+    internal sealed class ProdutcsTableMapping : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {
