@@ -50,7 +50,7 @@ namespace Alterdata.TesteFullStackBackend.Service.Implementations
                 Stock = p.Stock
             });
 
-            return productsDTO;
+            return productsDTO.OrderBy(c => c.Id);
         }
 
         public async Task CreateAsync(ProductDTO productDTO)

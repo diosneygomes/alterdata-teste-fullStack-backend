@@ -14,7 +14,7 @@ namespace Alterdata.TesteFullStackBackend.Api.V1.Requests.Product
         public decimal Price { get; init; }
 
         [Required(ErrorMessage = "O estoque é obrigatório.")]
-        [Range(1, int.MaxValue, ErrorMessage = "A quantidade deve ser maior que zero.")]
+        [Range(0, int.MaxValue, ErrorMessage = "A quantidade deve ser maior ou igual a zero.")]
         public int Stock { get; init; }
     }
 }

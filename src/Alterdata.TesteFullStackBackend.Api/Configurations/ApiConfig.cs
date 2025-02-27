@@ -15,6 +15,16 @@ namespace Alterdata.TesteFullStackBackend.Api.Configurations
                     options.SubstituteApiVersionInUrl = true;
                 });
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Development",
+                    builder =>
+                        builder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
             return services;
         }
 
@@ -25,6 +35,7 @@ namespace Alterdata.TesteFullStackBackend.Api.Configurations
         {
             if (env.IsDevelopment())
             {
+                app.UseCors("Development");
                 app.UseSwaggerConfig(apiVersionDescriptionProvider);
             }
 

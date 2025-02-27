@@ -53,7 +53,7 @@ namespace Alterdata.TesteFullStackBackend.Service.Implementations
                 Active = c.Active
             });
 
-            return clientsDTO;
+            return clientsDTO.OrderBy(c => c.Id);
         }
 
         public async Task CreateAsync(ClientDTO clientDTO)
